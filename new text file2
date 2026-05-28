@@ -1,0 +1,4 @@
+SELECT count(orders.id_price) AS 'Количество продукции в заказе',
+sum(price.price)
+FROM orders
+LEFT JOIN price ON orders.id_price = price.id_price;
